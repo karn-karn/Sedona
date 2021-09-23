@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sedona</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="page__body">
+  <header class="page-header">
+    <a href="#" class="page-header__logo">
+      <picture>
+        <source media="(min-width: 1280px)" srcset="img/pink-stars.svg">
+        <img src="" alt="Логотип Sedona">
+      </picture>
+    </a>
+    <nav class="page-header__navigation main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a class="site-list__link" href="index.html">Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="#">Фото и видео</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="form.html">Форма отзыва</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="https://htmlacademy.ru/">HTML ACADEMY</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-catalog-main">
+    <h1 class="page-catalog-main__title">Фото и видео</h1>
+    <section class="gallery">
+      <h2 class="gallery__title">Фото и видео</h2>
+      <p class="gallery__intro">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+      <div class="gallery__list">
+        <article class="gallery__item gallery-post">
+          <a class="gallery-post__img">
+            <picture>
+              <source media="(min-width: 1280px)" src="">
+              <source media="(min-width: 768px)" src="">
+              <img src="">
+            </picture>
+          </a>
+          <title class="gallery-post__title">Неродные просторы</title>
+          <cite class="gallery-post__author">Автор фото: <span class="gallery-post__author-name">Борис</span></cite>
+          <span class="gallery-post__likes">1350</span>
+        </article>
+        <article class="gallery__item">
+          <a gallery-post__img>
+            <picture>
+              <source media="(min-width: 1280px)" src="">
+              <source media="(min-width: 768px)" src="">
+              <img src="">
+            </picture>
+          </a>
+          <title class="gallery-post__title">Местная растительность</title>
+          <cite class="gallery-post__author">Автор фото: <span class="gallery-post__author-name">Сергей</span></cite>
+          <span class="gallery-post__likes">143</span>
+        </article>
+        <article class="gallery__item">
+          <a gallery-post__img>
+            <picture>
+              <source media="(min-width: 1280px)" src="">
+              <source media="(min-width: 768px)" src="">
+              <img src="">
+            </picture>
+          </a>
+          <title class="gallery-post__title">Дорога на север</title>
+          <cite class="gallery-post__author">Автор фото: <span class="gallery-post__author-name">Петр</span></cite>
+          <span class="gallery-post__likes">96</span>
+        </article>
+        <article class="gallery__item">
+          <a gallery-post__img>
+            <picture>
+              <source media="(min-width: 1280px)" src="">
+              <source media="(min-width: 768px)" src="">
+              <img src="">
+            </picture>
+          </a>
+          <title class="gallery-post__title">Мост дьявола</title>
+          <cite class="gallery-post__author">Автор фото: <span class="gallery-post__author-name">Антон</span></cite>
+          <span class="gallery-post__likes">254</span>
+        </article>
+      </div>
+    </section>
+    <section class="promo">
+      <h2 class="promo__title">Все еще сомневаетесь?</h2>
+      <p class="promo__intro">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+      <div class="promo__player player">
+        <video class="player__video" src="" width="260" height="150"></video>
+        <div class="player__progress">
+          <div class="player__progress-scale">
+            <div class="player__progress-toggle">
+
+            </div>
+          </div>
+        </div>
+        <div class="player__controls">
+          <button class="player__replay"><span class="visually-hidden">Просмотреть еще раз</span></button>
+          <button class="player__subs"><span class="visually-hidden">Субтитры</span></button>
+          <button class="player__full-size"><span class="visually-hidden">Увеличить во весь экран</span></button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <p class="page-footer__tag">#visitsedona</p>
+      <ul class="page-footer__socials socials">
+        <li class="socials__item">
+          <a class="socials__link" href="https://twitter.com">
+            <svg width="22" height="21">
+              <use xlink:href="#insta"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="https://facebook.com">
+            <svg width="15" height="28">
+              <use xlink:href="#fb"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="https://youtube.com">
+            <svg width="23" height="20">
+              <use xlink:href="#twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="page-footer__copyright">
+        <b class="page-footer__copyright-text">Разработано</b>
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg width="27" height="34">
+            <use xlink:href="#htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
