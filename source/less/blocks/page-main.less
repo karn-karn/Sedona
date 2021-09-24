@@ -1,0 +1,25 @@
+.page-main__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-image: url("../img/back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  @media (min-width: @tablet) {
+    font-size: 21px;
+    background-image: url("../img/back-desktop.jpg");
+  }
+}
+
+
+@media (min-resolution: 2dppx) {
+  .page-main__title {
+    background-image: url("../img/back-mobile@2x.jpg");
+
+    @media (min-width: @tablet) {
+      background-image: url("../img/back-desktop@2x.jpg");
+    }
+  }
+}

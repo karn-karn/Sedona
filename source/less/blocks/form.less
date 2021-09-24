@@ -1,0 +1,31 @@
+.form fieldset {
+  border: none;
+}
+
+.form__button {
+  color: @white;
+  font-weight: bold;
+  font-size: 21px;
+  text-transform: uppercase;
+  border: none;
+  background-color: @blue;
+  padding: 0;
+
+  &:hover {
+    background-color: @blue-hover;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: @blue-active;
+  }
+
+  &:disabled {
+    background-color: @grey-line-form;
+  }
+}
+
+.form__note {
+  color: @black-form;
+  text-transform: uppercase;
+}

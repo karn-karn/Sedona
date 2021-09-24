@@ -1,0 +1,38 @@
+.hotel-search__title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 21px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet) {
+    font-size: 30px;
+  }
+}
+
+.hotel-search__description {
+  margin: 0;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.hotel-search__link {
+  color: @white;
+  font-weight: bold;
+  font-size: 21px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: @blue;
+
+  &:hover {
+    background-color: @blue-hover;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: @blue-active;
+  }
+
+  &:disabled {
+    background-color: @grey-line-form;
+  }
+}

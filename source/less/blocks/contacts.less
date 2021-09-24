@@ -1,0 +1,36 @@
+.contacts__title {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet) {
+    font-size: 21px;
+  }
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0;
+  list-style: 0;
+}
+
+.contacts__label {
+  color: @black-form;
+  text-transform: uppercase;
+}
+
+.contacts__input {
+  font-weight: bold;
+  font-size: 18px;
+  background-color: @grey-form;
+  border: none;
+
+  &:hover {
+    background-color: @grey-line-form;
+  }
+
+  &:active {
+    background-color: transparent;
+    border: 4px solid @grey-line-form;
+  }
+}
