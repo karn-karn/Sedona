@@ -1,0 +1,24 @@
+.page-header {
+  position: relative;
+  height: 56px;
+  text-align: center;
+
+  @media (min-width: @desktop) {
+    width: 1200px;
+    padding: 0 40px;
+  }
+}
+
+.page-header__logo {
+  @media (min-width: @tablet) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}
+
+.page-header__logo--nav-opened {
+  display: none;
+}
