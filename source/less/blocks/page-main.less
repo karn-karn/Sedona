@@ -1,18 +1,69 @@
 .page-main__title {
-  margin: 0;
+  position: relative;
+  margin: 0 0 30px 0;
+  padding: 421px 20px 0;
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
   background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center 0;
+  text-align: center;
 
   @media (min-width: @tablet) {
+    margin-bottom: 32px;
+    padding: 561px 124px 0;
     font-size: 21px;
     background-image: url("../img/back-desktop.jpg");
   }
+
+  @media (min-width: @desktop) {
+    padding-top: 572px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 282px;
+    height: 214px;
+    background-image: url("../img/text-index.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media (min-width: @tablet) {
+      top: 77px;
+      width: 461px;
+      height: 350px;
+      background-image: url("../img/text-index-tablet.svg");
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 332px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 57px;
+    background-image: url("../img/intro-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media (min-width: @tablet) {
+      top: 461px;
+    }
+  }
 }
 
+.page-main__title br:first-of-type {
+  @media (min-width: @tablet) {
+    display: none;
+  }
+}
 
 @media (min-resolution: 2dppx) {
   .page-main__title {

@@ -2,20 +2,23 @@
   position: relative;
   height: 56px;
   text-align: center;
+  z-index: 1;
 
   @media (min-width: @desktop) {
     width: 1200px;
     padding: 0 40px;
+    margin: 0 auto;
   }
 }
 
 .page-header__logo {
+  z-index: 1;
+
   @media (min-width: @tablet) {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
   }
 }
 
