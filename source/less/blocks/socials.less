@@ -1,5 +1,28 @@
 .socials {
-  margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.socials__link {
+  width: 46px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @blue;
+
+  &:hover {
+    background-color: @blue-hover;
+  }
+
+  &:active {
+    background-color: @blue-active;
+  }
+}
+
+.socials__link:active img {
+  opacity: 30%;
 }
