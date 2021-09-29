@@ -1,24 +1,83 @@
 .page-form-main__title {
-  margin: 0;
+  position: relative;
+  margin: 0 0 28px 0;
+  padding: 194px 20px 0;
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  background-image: url("../img/back-mobile.jpg");
+  background-image: url("../img/back-mobile-form.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center -110px;
+  text-align: center;
 
   @media (min-width: @tablet) {
-    font-size: 21px;
-    background-image: url("../img/back-desktop.jpg");
+    margin-bottom: 32px;
+    padding: 352px 168px 0;
+    font-size: 30px;
+    background-image: url("../img/back-desktop-form.jpg");
+    background-position: center -67px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 33px;
+    padding-top: 413px;
+    background-position: center -58px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 52px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 229px;
+    height: 39px;
+    background-image: url("../img/sedona.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media (min-width: @tablet) {
+      top: 95px;
+      width: 457px;
+      height: 78px;
+      background-image: url("../img/sedona-tablet.svg");
+    }
+
+    @media (min-width: @desktop) {
+      width: 460px;
+      height: 80px;
+      top: 102px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 101px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 57px;
+    background-image: url("../img/intro-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media (min-width: @tablet) {
+      top: 233px;
+    }
+
+    @media (min-width: @desktop) {
+      top: 243px;
+    }
   }
 }
 
 @media (min-resolution: 2dppx) {
   .page-form-main__title {
-    background-image: url("../img/back-mobile@2x.jpg");
+    background-image: url("../img/back-mobile-form@2x.jpg");
 
     @media (min-width: @tablet) {
-      background-image: url("../img/back-desktop@2x.jpg");
+      background-image: url("../img/back-desktop-form@2x.jpg");
     }
   }
 }

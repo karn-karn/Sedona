@@ -1,15 +1,115 @@
-.form fieldset {
+.form {
+  display: grid;
+
+  @media (min-width: @tablet) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    padding: 0 60px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+    width: 960px;
+  }
+}
+
+.form__name {
   border: none;
+  margin: 0;
+
+  @media (min-width: @tablet) {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 70px;
+  }
+}
+
+.form__contacts {
+  border: none;
+  margin: 0;
+
+  @media (min-width: @tablet) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 2;
+    border-top: 1px solid @grey-line;
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 51px;
+  }
+}
+
+.form__emotions {
+  border: none;
+  margin: 0;
+
+  @media (min-width: @tablet) {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 70px;
+  }
+}
+
+.form__visited {
+  border: none;
+  margin: 0 0 19px 0;
+
+  @media (min-width: @tablet) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 3;
+    border-top: 1px solid @grey-line;
+    margin-bottom: 37px;
+  }
+}
+
+.form__comment {
+  border: none;
+  margin: 0 0 51px;
+
+  @media (min-width: @tablet) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 4;
+    border-top: 1px solid @grey-line;
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 57px;
+  }
 }
 
 .form__button {
+  display: block;
+  width: 280px;
+  padding: 18px 0 15px;
+  margin: 0 auto;
   color: @white;
-  font-weight: bold;
   font-size: 21px;
   text-transform: uppercase;
   border: none;
   background-color: @blue;
-  padding: 0;
+
+  @media (min-width: @tablet) {
+    width: 324px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop) {
+    width: 480px;
+  }
+
 
   &:hover {
     background-color: @blue-hover;
@@ -25,7 +125,23 @@
   }
 }
 
+.form__wrapper {
+  @media (min-width: @tablet) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 5;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .form__note {
   color: @black-form;
   text-transform: uppercase;
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: block;
+    align-self: center;
+  }
 }

@@ -5,11 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sedona</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% -223px;
+    /* Mobile layout by default */
+    background-image: url( "img/Form Mobile.png" );
+  }
+  /* Tablet */
+  @media ( min-width: 768px ) {
+    HTML {
+      /* Tablet layout */
+      background-position:  50% 0;
+      background-image: url( "img/Form Tablet.png" );
+    }
+  }
+  /* Desktop */
+  @media ( min-width: 1280px ) {
+    HTML {
+      /* Desktop layout */
+      background-image: url( "img/Form Desktop.png" );
+    }
+  }
+</style>
+<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+<script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
+
 </head>
 <body class="page__body">
   <header class="page-header">
-    <a href="#" class="page-header__logo">
-       <picture>
+    <a href="index.html" class="page-header__logo">
+      <picture>
         <source media="(min-width: 1280px)" srcset="img/logotype-desktop.svg">
         <img src="img/logotype-mobile.svg" alt="Логотип Sedona">
       </picture>
@@ -18,13 +46,13 @@
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
-          <a class="site-list__link" href="index.html">Главная</a>
+          <a class="site-list__link site-list__link--active" href="index.html">Главная</a>
         </li>
         <li class="site-list__item">
           <a class="site-list__link" href="catalog.html">Фото и видео</a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link site-list__link--active" href="#">Форма отзыва</a>
+          <a class="site-list__link" href="#">Форма отзыва</a>
         </li>
         <li class="site-list__item">
           <a class="site-list__link" href="https://htmlacademy.ru/">HTML ACADEMY</a>
@@ -59,7 +87,7 @@
           <legend class="contacts__title">Контактная информация:</legend>
           <ul class="contacts__list">
             <li class="contacts__item">
-              <label class="contacts__label" for="filter-phone">Контактный телефон*:</label>
+              <label class="contacts__label" for="filter-phone"><span>Контактный</span> телефон*:</label>
               <input class="contacts__input" type="tel" name="phone" id="filter-phone" required placeholder="Введите телефон">
             </li>
             <li class="contacts__item">
@@ -72,7 +100,7 @@
           <legend class="emotions__title">Ваше общее впечатление:</legend>
           <ul class="emotions__list">
             <li class="emotions__item">
-              <input class="emotions__input visually-hidden" type="radio" name="emotion" value="good" id="filter-good">
+              <input class="emotions__input visually-hidden" type="radio" name="emotion" value="good" id="filter-good" checked>
               <label class="emotions__option" for="filter-good">Скорее положительное</label>
             </li>
             <li class="emotions__item">
@@ -86,18 +114,18 @@
           </ul>
         </fieldset>
         <fieldset class="form__visited visited">
-          <legend class="visited__title">Посещенные достопримечательности:</legend>
+          <legend class="visited__title">Посещенные<br> достопримечательности:</legend>
           <ul class="visited__list">
             <li class="visited__item">
-              <input class="visited__checkbox visually-hidden" type="checkbox" name="devil-bridge" id="filter-devil-bridge">
+              <input class="visited__checkbox visually-hidden" type="checkbox" name="devil-bridge" id="filter-devil-bridge" checked>
               <label class="visited__option" for="filter-devil-bridge">Мост Дьявола</label>
             </li>
             <li class="visited__item">
-              <input class="visited__checkbox visually-hidden" type="checkbox" name="mount-bell" id="filter-mount-bell">
+              <input class="visited__checkbox visually-hidden" type="checkbox" name="mount-bell" id="filter-mount-bell" checked>
               <label class="visited__option" for="filter-mount-bell">Гора-Колокол</label>
             </li>
             <li class="visited__item">
-              <input class="visited__checkbox visually-hidden" type="checkbox" name="slide-park" id="filter-slide-park">
+              <input class="visited__checkbox visually-hidden" type="checkbox" name="slide-park" id="filter-slide-park" checked>
               <label class="visited__option" for="filter-slide-park">Слайд-парк</label>
             </li>
             <li class="visited__item">
@@ -122,36 +150,32 @@
       <p class="page-footer__tag">#visitsedona</p>
       <ul class="page-footer__socials socials">
         <li class="socials__item">
+          <span class="visually-hidden">Мы в Твиттере</span>
           <a class="socials__link" href="https://twitter.com">
-            <svg width="22" height="21">
-              <use xlink:href="#insta"></use>
-            </svg>
+            <img src="img/icon-twi.svg">
           </a>
         </li>
         <li class="socials__item">
+          <span class="visually-hidden">Мы в Фэйсбуке</span>
           <a class="socials__link" href="https://facebook.com">
-            <svg width="15" height="28">
-              <use xlink:href="#fb"></use>
-            </svg>
+            <img src="img/icon-fbok.svg">
           </a>
         </li>
         <li class="socials__item">
+          <span class="visually-hidden">Мы в Ютубе</span>
           <a class="socials__link" href="https://youtube.com">
-            <svg width="23" height="20">
-              <use xlink:href="#twitter"></use>
-            </svg>
+            <img src="img/icon-ytb.svg">
           </a>
         </li>
       </ul>
       <div class="page-footer__copyright">
         <b class="page-footer__copyright-text">Разработано</b>
         <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg width="27" height="34">
-            <use xlink:href="#htmlacademy"></use>
-          </svg>
+          <svg width="27" height="35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z" fill="#000"/></svg>
         </a>
       </div>
     </div>
   </footer>
+  <script src="js/script.min.js"></script>
 </body>
 </html>
