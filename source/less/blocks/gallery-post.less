@@ -1,10 +1,142 @@
+.gallery-post {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+  padding: 22px 0 0;
+
+  @media (min-width: @tablet) {
+    padding: 0;
+    margin: 0;
+    width: 324px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 400px;
+    display: flex;
+  }
+
+  &::after {
+    @media (max-width: @mobile) {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 767px;
+      height: 1px;
+      background-color: @grey-line-form;
+    }
+  }
+
+  &:first-of-type {
+    @media (min-width: @tablet) {
+      width: 648px;
+    }
+
+    @media (min-width: @desktop) {
+      width: 1200px;
+    }
+
+    &::before {
+      @media (max-width: @mobile) {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 767px;
+        height: 1px;
+        background-color: @grey-line-form;
+      }
+    }
+  }
+}
+
+.gallery-post__img,
+.gallery-post__img img {
+  display: block;
+  cursor: pointer;
+}
+
+.gallery-post__info {
+  padding: 11px 0 17px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet) {
+    position: relative;
+    background-color: @grey-form;
+    padding: 18px 20px 17px;
+  }
+
+  @media (min-width: @desktop) {
+    color: @white;
+    padding: 18px 0 17px;
+    background-color: fade(@black, 30%);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.gallery-post:nth-of-type(odd) .gallery-post__info {
+  @media (min-width: @tablet) and (max-width: 1279px) {
+    background-color: @grey-gallery;
+  }
+}
+
+.gallery-post:first-of-type .gallery-post__info {
+  @media (min-width: @tablet) and (max-width: 1279px) {
+    background-color: @grey-form;
+  }
+}
+
 .gallery-post__title,
 .gallery-post__likes {
+  display: block;
   font-weight: bold;
   line-height: 24px;
   text-transform: uppercase;
 }
 
+.gallery-post__title {
+  @media (min-width: @tablet) {
+    line-height: 21px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0 120px 0 20px;
+  }
+}
+
 .gallery-post__author {
   line-height: 24px;
+  font-style: normal;
+  margin-bottom: 10px;
+
+  @media (min-width: @tablet) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0 120px 0 20px;
+  }
+}
+
+.gallery-post__likes {
+  padding: 3px 0 0 37px;
+  background-image: url("../img/like-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 1px;
+
+  @media (min-width: @tablet) {
+    position: absolute;
+    bottom: 27px;
+    right: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    background-image: url("../img/like-icon-white.svg");
+  }
 }
