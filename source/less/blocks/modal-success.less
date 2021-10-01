@@ -1,0 +1,75 @@
+.modal-success {
+  width: 320px;
+  background-color: @white;
+  padding: 38px 0 0;
+  text-align: center;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+  @media (min-width: @tablet) {
+    width: 640px;
+    padding: 55px 0 0;
+  }
+}
+
+.modal-success__title {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 0 0 21px;
+
+  @media (min-width: @tablet) {
+    padding: 0 75px;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 25px;
+  }
+}
+
+.modal-success__info {
+  text-transform: uppercase;
+  margin: 0 0 32px;
+  padding: 0 45px;
+
+  @media (min-width: @tablet) {
+    margin: 0 0 30px;
+  }
+}
+
+.modal-success__wrapper {
+  background-color: @grey-form;
+  padding: 20px 0;
+
+  @media (min-width: @tablet) {
+    padding: 44px 0;
+  }
+}
+
+.modal-success__button {
+  color: @white;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  background-color: @blue;
+  padding: 18px 0 14px;
+  width: 280px;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet) {
+    width: 458px;
+  }
+
+  &:hover {
+    background-color: @blue-hover;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: @blue-active;
+  }
+
+  &:disabled {
+    background-color: @grey-line-form;
+  }
+}

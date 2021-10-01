@@ -8,11 +8,12 @@
     padding: 0;
     margin: 0;
     width: 324px;
+    display: flex;
+    flex-direction: column;
   }
 
   @media (min-width: @desktop) {
     width: 400px;
-    display: flex;
   }
 
   &::after {
@@ -66,7 +67,8 @@
   @media (min-width: @tablet) {
     position: relative;
     background-color: @grey-form;
-    padding: 18px 20px 17px;
+    padding: 18px 0 17px;
+    flex-grow: 1;
   }
 
   @media (min-width: @desktop) {
@@ -103,9 +105,6 @@
 .gallery-post__title {
   @media (min-width: @tablet) {
     line-height: 21px;
-  }
-
-  @media (min-width: @desktop) {
     padding: 0 120px 0 20px;
   }
 }
@@ -117,9 +116,6 @@
 
   @media (min-width: @tablet) {
     margin: 0;
-  }
-
-  @media (min-width: @desktop) {
     padding: 0 120px 0 20px;
   }
 }
